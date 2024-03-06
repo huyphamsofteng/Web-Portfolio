@@ -1,0 +1,92 @@
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+main{
+    margin-left:10%;
+    margin-top: 5%;
+}
+/* header section */
+header{
+    background-color: beige;
+    position: fixed;
+    width: 100%;
+    height: 5%;
+    top: 0px;
+}
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin-left:10%;
+    align-items: center;
+}
+.logo{
+    grid-column: 1;
+}
+.navbar{
+    grid-column: 2;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.navbar li{
+    
+}
+.mobile .nav-button{
+    visibility: hidden;
+}
+.nav-button{
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background-color: none;
+    cursor: pointer;
+}
+@media only screen and (max-width: 1111px) {
+    .navbar .nav-button{
+        visibility: hidden;
+    }
+}
+/* profile section */
+.profile{
+    width: 200px;
+    height: auto;
+}
+/* education section */
+.edu-container{
+    display: flex;
+    flex-wrap: wrap;
+    width:80%;
+    justify-content: space-around;
+}
+.edu{
+    flex: 0 0 20%;
+    min-width: 400px;
+}
+.edu-bg-1{
+    aspect-ratio: 16/9;
+    background-size: 100% auto;
+    background-image: url("./resources/edu-1.png");
+}
+.edu-bg-2{
+    aspect-ratio: 16/9;
+    background-size: 100% auto;
+    background-image: url("./resources/edu-2.png");
+}
+.edu-bg-3{
+    aspect-ratio: 16/9;
+    background-size: 100% auto;
+    background-image: url("./resources/edu-3.jpg");
+}
+.program-container{
+    display:flex;
+    justify-content: space-around;
+    width: 80%;
+    margin-left: 10%;
+}
+
+
