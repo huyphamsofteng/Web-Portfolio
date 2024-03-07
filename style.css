@@ -1,56 +1,118 @@
-body{
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 16px;
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-main{
-    margin-left:10%;
-    margin-top: 5%;
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-size: 23px;
+  }
+.montserra {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
+  
 /* header section */
-header{
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: beige;
     position: fixed;
+    height: 4.2rem; 
     width: 100%;
-    height: 5%;
     top: 0px;
 }
-nav{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 80%;
-    margin-left:10%;
-    align-items: center;
-}
 .logo{
-    grid-column: 1;
+    margin-left: 10%;
+    text-align: center;
 }
-.navbar{
-    grid-column: 2;
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
+.logo-letter{
+    padding: 0 0.1rem;
+    transition: all 100ms;
 }
-.navbar li{
-    
-}
-.mobile .nav-button{
-    visibility: hidden;
-}
-.nav-button{
-    width: 2rem;
-    height: 2rem;
-    border: none;
-    background-color: none;
+.logo:hover{
     cursor: pointer;
 }
-@media only screen and (max-width: 1111px) {
-    .navbar .nav-button{
-        visibility: hidden;
+.nav-link{
+    margin-right: 10%;
+    display: flex;
+}
+.nav-link li{
+    padding: 1rem;
+    list-style: none;
+    display: block;
+    font-size: 23px;
+}
+.nav-link li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+.nav-link li:hover{
+    border-radius: 30px;
+    background-color: #E97777;
+    color: #030637;
+    font-size: 23px;
+    transition: all 200ms;
+}
+.nav-burger{
+    display: none;
+    cursor: pointer;
+}
+
+.nav-burger div{
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+}
+
+.disable{
+    height: 0;
+    opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .logo{
+        position: absolute;
+        top: 0.rem;
+        margin: 0;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    .nav-burger {
+        display: block;
+        align-self: self-end;
+        height: 3.2rem;
+    }
+    .nav-link{
+        margin:1rem 0;
+        flex-direction: column;
+        height: 0;
+        opacity: 0;
+    }
+    .nav-link li{
+        background-color: beige;
+        text-align: center;
+        width: 100vh;
+    }
+    .nav-link li:hover{
+        border-radius: 30px;
+    }
+    .enable{
+        height: auto;
+        opacity: 1;
+        transition: opacity 200ms ease-in;
     }
 }
+
 /* profile section */
 .profile{
     width: 200px;
@@ -88,5 +150,3 @@ nav{
     width: 80%;
     margin-left: 10%;
 }
-
-
