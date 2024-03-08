@@ -13,22 +13,40 @@ html{
 
 body {
     font-family: "Roboto", sans-serif;
-} */
+    font-size: 23px;
+} 
 
 img {
     max-width: 100%;
     width: 100%;
 } 
 
-
 .roboto-bold {
     font-family: "Roboto", sans-serif;
     font-size: 23px;
   }
+
+.font-body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.33rem;
+    font-size: 45px; 
+}
 .montserra {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+.title-hidden {
+    opacity: 0;
+    transform: translateX(-250px);
+    transition: all 0.33s ease-in;
+}
+
+.title-toggle {
+    opacity: 1;
+    transform: translateX(0);
 }
   
 /* header section */
@@ -40,6 +58,8 @@ img {
     height: 4.2rem; 
     width: 100%;
     top: 0px;
+    position: relative;
+    z-index: 30;
 }
 .logo{
     -webkit-user-select:none;
@@ -53,7 +73,6 @@ img {
     transition: all 100ms;
     color: #124076;
     font-weight: 600;
-    font-size: 23px;
 }
 .logo-letter:hover{
     color: #F57D1F;
@@ -71,7 +90,6 @@ img {
     padding: 1rem;
     list-style: none;
     display: block;
-    font-size: 23px;
 }
 .nav-link li a{
     display: inline-block;
@@ -129,27 +147,41 @@ img {
 .tag-box{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: 10vh;
 }
-.tag-box .intro-text {
-    margin-left: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.33rem;
+.intro-text-1, .intro-text-2 {   
     transition: ease-out 333ms;
-    font-size: 45px;
-    min-width: 400px;
-    line-height: 6.8rem;
+    position: relative;
+    z-index: 2;
+}
+
+.intro-text-1{
+    top: 2.3vh;
+}
+
+.intro-text-2{
+    bottom: 4.5vh;
+}
+
+.banner-span{
+    border-bottom: 10px solid #FFB000;
 }
 
 .tag-box img {
-    width: 333px;
-    border-radius: 10px;
+    object-fit: contain;
+    z-index: 0;
+    min-width: 450px;
+    width: 450px;
+    clip-path: polygon(0 0, 100% 7%,100% 100%,0% 92%);
 }
 
-.tag-box .banner-span:hover{
+.banner-span:hover{
     font-weight: 777;
-    border-bottom: 10px dashed #FFB000;
+    border-top: 10px solid #87A922;
+    border-bottom: 0px;
     cursor: pointer;
 }
 
@@ -177,49 +209,82 @@ img {
     position: relative;
 }
 
-.hello{
-    cursor: pointer;
-    display: inline;
-    border-radius: 3px 9px 3px 9px;
-}
 
 /* education section */
+.education{
+    margin-top: 50vh;
+    margin-left: 10%;
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.education h2 {
+    position: relative;
+    text-align: center;
+    color: #124076;
+    bottom: 10vh;
+}
 .edu-container{
     display: flex;
-    flex-wrap: wrap;
-    width:80%;
-    justify-content: space-around;
+    min-width: 90%;
+    width: 120%;
+    justify-content: space-between;
 }
-.edu{
-    flex: 0 0 20%;
-    min-width: 400px;
+.edu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
-.edu-bg-1{
-    aspect-ratio: 16/9;
-    background-size: 100% auto;
-    background-image: url("./resources/edu-1.png");
+.edu-img{
+    aspect-ratio: 1/1;
+    padding: 8px;
+    width: 30vh;
+    border: 3px solid #FFB000;
+    border-radius: 30vh;
+    position: relative;
+    z-index: 2;
+    background-color: white;
 }
-.edu-bg-2{
-    aspect-ratio: 16/9;
-    background-size: 100% auto;
-    background-image: url("./resources/edu-2.png");
+
+.edu-text{
+    position:relative;
+    text-align: center;
+    top: 3vh;
 }
-.edu-bg-3{
-    aspect-ratio: 16/9;
-    background-size: 100% auto;
-    background-image: url("./resources/edu-3.jpg");
+.edu-text-hidden{
+    position: relative;
+    top: 20%;
+    transition: ease-in 200ms;
 }
-.program-container{
-    display:flex;
-    justify-content: space-around;
-    width: 80%;
-    margin-left: 10%;
+.edu-text-hidden:before{
+    content: " ";
+    height: 50px;
+    width: 3px;
+    display: block;
+    position: relative;
+    top: 80px;
+    left: 59px;
+    background-color: #FFB000;
+}
+
+.edu-line{
+    position: absolute;
+    width: 1200px;
+    height: 3px;
+    background-color: #FFB000;
+    margin-left: 20px;
+    top: 400px;
 }
 
 @media screen and (max-width: 768px) {
     .logo{
         position: absolute;
-        top: 0.rem;
+        top: 0rem;
         margin: 0;
     }
     .navbar{
@@ -231,7 +296,7 @@ img {
         height: 3.2rem;
     }
     .nav-link{
-        margin:1rem 0;
+        margin: 0;
         flex-direction: column;
         transition: opacity 290ms ease-in;
         height: 0;
@@ -244,6 +309,7 @@ img {
     }
     .nav-link li:hover{
         border-radius: 30px;
+        height: auto;
     }
     .toggle{
         height: auto;
@@ -253,8 +319,20 @@ img {
         height: 0;
         opacity: 0;
     }
-    .tag-box{
+    .intro-text-2{
+        width: 50%;
+        font-size: 2rem;
+    }
+    .education{
+        margin-top: 80vh;
+    }
+    .edu-container{
         flex-direction: column;
-        margin-top: 25vh;
+        width: 100%;
+        min-height: 150%;
+    }
+
+    .edu-text-hidden{
+        display: none;
     }
 }
