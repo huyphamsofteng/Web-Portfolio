@@ -2,25 +2,23 @@ const navBurger = document.querySelector('.nav-burger');
 const navLink = document.querySelector('.nav-link');
 const logo = document.getElementsByClassName('logo-letter');
 const bannerText = document.querySelectorAll('.banner-span');
-const navIcon = document.getElementsByClassName('line');
 
-const eduImg = document.querySelectorAll('.edu-img');
-const eduText = document.querySelectorAll('.edu-text-hidden');
+
 
 const intersectionObs = document.querySelectorAll('.title-hidden');
 
 const navBar = () => {
     navBurger.addEventListener('click',()=>{
-        navLink.classList.toggle('toggle');   
-        navLink.classList.remove('hidden');
+        navLink.classList.remove('nav-link-hidden');
+        navLink.classList.toggle('nav-link-toggle');
         navIcon[0].classList.toggle('nav-burger-toggle');
         navIcon[1].classList.toggle('nav-burger-toggle-1');
         navIcon[2].classList.toggle('nav-burger-toggle-2');
     })
     
     navLink.addEventListener('mouseleave',()=>{
-        navLink.classList.add('hidden');
-        navLink.classList.remove('toggle'); 
+        navLink.classList.add('nav-link-hidden');
+        navLink.classList.remove('nav-link-toggle');
         navIcon[0].classList.remove('nav-burger-toggle');
         navIcon[1].classList.remove('nav-burger-toggle-1');
         navIcon[2].classList.remove('nav-burger-toggle-2');
@@ -39,17 +37,6 @@ const banner = () =>{
             bannerText[i].style.color = 'black';
             bannerText[i+1].style.color = 'black';
             bannerText[i-1].style.color = 'black';
-        })
-    }
-}
-
-const edu = () =>{
-    for (let i = 0; i <= 2; i++ ){
-        eduImg[i].addEventListener('mouseover', () =>{
-            eduText[i].style.top = "-20%";
-        })
-        eduImg[i].addEventListener('mouseleave', () =>{
-            eduText[i].style.top = "20%";
         })
     }
 }
@@ -74,7 +61,6 @@ const runObserver = () => {
 
 navBar();
 banner();
-edu();
 runObserver();
 
 
