@@ -19,25 +19,25 @@
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
-            <div class="logo ">
+            <div class="logo">
                 <span class="logo-letter">H</span><span class="logo-letter">a</span><span class="logo-letter">r</span><span class="logo-letter">r</span><span class="logo-letter">y</span><span>&nbsp;</span><span class="logo-letter">P</span><span class="logo-letter">h</span><span class="logo-letter">a</span><span class="logo-letter">m</span>
             </div>
             <ul class="nav-link">
-                <li><a href="#about-me" class="font-nav">About Me</a></li>
-                <li><a href="#work" class="font-nav">Experience</a></li>
-                <li><a href="#" class="font-nav">Class Projects</a></li>
-                <li><a href="#" class="font-nav">Contact Me</a></li>
+                <li><a href="#top" class="font-nav">Introduction</a></li>
+                <li><a href="#about-me" class="font-nav">My Experience</a></li>
+                <li><a href="#tech" class="font-nav">Technology</a></li>
+                <li><a href="#contact" class="font-nav">Contact Me</a></li>
             </ul>
         </header>
-        
+        <div id="top"></div>
         <main>
             <div class="banner title-hidden">
                 <div class="intro-text font-body"><span class="banner-span">H</span><span class="banner-span">a</span><span class="banner-span">r</span><span class="banner-span">r</span><span class="banner-span">y</span> <span class="banner-span">P</span><span class="banner-span">h</span><span class="banner-span">a</span><span class="banner-span">m</span></div>
                 <img src="./resources/profile-img.jpeg" alt="profile picture" class="profile">
                 <h1 class="intro-text font-body"><span class="highlight-container"><span class="highlight">Full-Stack Developer</span></span></h1>
             </div>
-
-            <div class="about-me title-hidden" id="about-me">
+            <div id="about-me"></div>
+            <div class="about-me title-hidden">
                 <div class="about-heading">
                     <h2 class="font-body">About Me</h2>
                 </div>
@@ -45,26 +45,26 @@
                     <div class="about-edu">
                         <p>Third-year student in Software Engineering Technology at McMaster University.</p>
                         <div class="about-link">
-                            <a href="https://www.google.com" target="_blank"><img src="./resources/github.svg" alt="github" class="about-link-item"></a>
-                            <a href="https://www.google.com" target="_blank"><img src="./resources/linkedin.svg" alt="linkedin" class="about-link-item"></a>
-                            <a href="https://www.google.com" target="_blank"><img src="./resources/resume.svg" alt="resume" class="about-link-item"></a>
+                            <a href="https://www.google.com" target="_blank"><img src="./resources/github.svg" alt="github" class="link-item"></a>
+                            <a href="https://www.google.com" target="_blank"><img src="./resources/linkedin.svg" alt="linkedin" class="link-item"></a>
+                            <a href="https://www.google.com" target="_blank"><img src="./resources/resume.svg" alt="resume" class="link-item"></a>
                         </div>
-                        <h3 class="">Education</h3>
+                        <h3 class="font-body">Education</h3>
                         <div class="edu-container">
                             <div class="edu-item">
                                 <p class="edu-text">2017 - 2020</p>
                                 <img class='edu-img' src="./resources/edu-img-1.svg" alt="">
                                 <p class="edu-text montserra">Electronics Engineering Technician</p>
                             </div>
-                            <div class="line-box"></div>
+                            <div class="line-box-1"></div>
                             <div class="edu-item">
-                                <p class="edu-text-hidden">2017 - 2020</p>
+                                <p class="edu-text ">2017 - 2020</p>
                                 <img class='edu-img' src="./resources/edu-img-1.svg" alt="">
                                 <p class="edu-text montserra">Computer Engineering Technology</p>
                             </div>
-                            <div class="line-box"></div>
+                            <div class="line-box-1"></div>
                             <div class="edu-item">
-                                <p class="edu-text-hidden">2023 - PRESENT</p>
+                                <p class="edu-text ">2023 - PRESENT</p>
                                 <img class='edu-img' src="./resources/edu-img-3.png" alt="">
                                 <p class="edu-text montserra">Software Engineering Technology</p>
                             </div>
@@ -73,24 +73,54 @@
                     <div class="about-work">
                         <h3 class="work-text" id="work">Work Experience</h3>
                         <div class="work-item-left">
-                            <h4>2023</h4>
-                            <h4>Computer Technician</h4>
+                            <div class="year"><p>2023</p></div>
+                            <h4 class="work-title">IT Service Field I </h4>
                         </div>
+                        <div class="line-box-2"></div>
                         <div class="work-item-right">
-                            <h4>2020</h4>
-                            <h4>IT Service Field I</h4> 
+                            <div class="year"><p>2020</p></div>
+                            <h4 class="work-title">Computer Technician </h4> 
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="projects">
-
+            <div id="tech"></div>
+            <div class="language title-hidden">
+                <h2 class="font-body">Programming Language I use</h2>
+                <div class="lang-container">
+                    <div class="lang-item">
+                        <img src="./resources/project-1.png" alt="currency converter" class="lang-img">
+                        <h3>Currency Convert</h3>
+                        <p>Python script to convert currency in real-time exchange rate.</p>
+                        <div class="lang-link">
+                        <img src="./resources/python.svg" alt="python icon" class="link-item"></div>
+                    </div>
+                    <div class="lang-item">
+                        <img src="./resources/project-2.png" alt="web-based porject" class="lang-img">
+                        <h3>Dev Huy Pham</h3>
+                        <p>A web-based project using HTML CSS JS.</p>
+                        <div class="lang-link">
+                        <img src="./resources/html-5.svg" alt="html" class="link-item">
+                        <img src="./resources/css-3.svg" alt="css" class="link-item">
+                        <img src="./resources/js.svg" alt="js" class="link-item">
+                        </div>
+                    </div>
+                    <div class="lang-item">
+                        <img src="./resources/project-3.png" alt="currency converter" class="lang-img">
+                        <h3>Gauss Elimination</h3>
+                        <p>Calculate x vector of input matrix using Gauss Elimination</p>
+                        <div class="lang-link">
+                        <img src="./resources/python.svg" alt="python icon" class="link-item">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="contact">
-
-            </div> -->
+            <div class="contact title-hidden">
+                <h2 class="font-body" id="contact">Contact Me</h2>
+                <h3>I'm currently located in Toronto, CA<br>If something catches your eye, <br>My email: <a href="mailto:phamd18@mcmaster.ca" id="email">phamd18@mcmaster.ca</a></h3>
+            </div>
         </main>
-        <footer role="presentation">
+        <footer>
 
         </footer>
         <script src="./script.js"></script>

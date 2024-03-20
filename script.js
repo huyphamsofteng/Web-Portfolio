@@ -2,7 +2,7 @@ const navBurger = document.querySelector('.nav-burger');
 const navLink = document.querySelector('.nav-link');
 const logo = document.getElementsByClassName('logo-letter');
 const bannerText = document.querySelectorAll('.banner-span');
-
+const langContainer = document.querySelector('.lang-container');
 
 
 const intersectionObs = document.querySelectorAll('.title-hidden');
@@ -41,13 +41,20 @@ const banner = () =>{
     }
 }
 
+const scroll = () => {
+    langContainer.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        langContainer.scrollLeft += e.deltaY;
+    })
+}
+
 const observer = new IntersectionObserver(entries => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('title-toggle')
+            setTimeout(()=>{entry.target.classList.add('title-toggle')},60)
         }
         else {
-            entry.target.classList.remove('title-toggle')
+            setTimeout(()=>{entry.target.classList.remove('title-toggle')},60)
         }
     })
 })
@@ -62,6 +69,7 @@ const runObserver = () => {
 navBar();
 banner();
 runObserver();
+scroll();
 
 
 
