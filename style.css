@@ -346,13 +346,13 @@ img {
     min-width: 80%;
     margin-left: 10%;
 }
-.language h3 {
+.language h2 {
     margin-bottom: 3%;
 }
 .lang-container{
     display: flex;
     width: 100%;
-    height: 60vh;
+    height: 33vh;
     column-gap: 3%;
     overflow: hidden;
     align-items: center;
@@ -361,9 +361,9 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30vw;
+    width: auto;
     min-width: 30vw;
-    height: 50vh;
+    height: 100%;
     border: 1px solid black;
     text-align: center;
     transition: all 500ms;
@@ -374,22 +374,20 @@ img {
     transform: translateY(-7px);
     box-shadow: -7px 7px var(--font-color-text);
 }
-.lang-container h3{
-    padding: 1vh;
-}
+
 .lang-item p{
-    padding: 1vh;
+    padding: 1%;
     height: 15%;
 }
 .lang-item h3 {
-    height: 25%;
+    height: 23%;
 }
 .lang-img{
     width: 100%;
-    height: 50%;
-    max-height: 50%;
+    height: 49%;
+    max-height: 49%;
     object-fit: contain;
-    margin-bottom: 1vh;
+    margin-bottom: 1%;
 }
 .lang-link{
     display: flex;
@@ -523,6 +521,9 @@ img {
         right: 0;
     }
     /* Programming section */
+    .lang-container{
+        height: 42vh;
+    }
     .lang-item p{
         font-size: 3.3vw;
     }
