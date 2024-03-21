@@ -62,8 +62,8 @@ img {
     position: fixed;
     top: 0%;
     padding: 1vh 0;
-    min-width: 100%;
-    width: 100%;
+    min-width: 100vw;
+    width: 100vw;
     min-height: 5vh;
     height: 5vh;
     z-index: 30;
@@ -74,7 +74,7 @@ img {
     -moz-user-select:none;
     user-select:none;
     text-align: center;
-    margin-left: 10%;
+    margin-left: 10vh;
 }
 .logo-letter{
     padding: 0 0.1rem;
@@ -233,7 +233,6 @@ img {
 }
 .link-item{
     display: inline-block;
-    min-width: 3vh;
     width: 3vh;
     padding: 1vh;
 }
@@ -396,6 +395,9 @@ img {
     display: flex;
     height: 10%;
     max-height: 10%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact{
