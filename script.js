@@ -1,9 +1,10 @@
 const navBurger = document.querySelector('.nav-burger');
 const navLink = document.querySelector('.nav-link');
 const logo = document.getElementsByClassName('logo-letter');
-const bannerText = document.querySelectorAll('.banner-span');
-const langContainer = document.querySelector('.lang-container');
 
+const langContainer = document.querySelector('.lang-container');
+const navIcon = document.querySelectorAll('.line');
+const introText = document.querySelector('.intro-line');
 
 const intersectionObs = document.querySelectorAll('.title-hidden');
 
@@ -26,19 +27,9 @@ const navBar = () => {
 }
 
 const banner = () =>{
-    let color_arr = ['#9A031E','#E36414','#FB8B24']
-    for (let i = 0; i <= 8; i++ ){
-        bannerText[i].addEventListener('mouseover', () =>{
-            bannerText[i].style.color = color_arr[0];
-            bannerText[i+1].style.color = color_arr[1];
-            bannerText[i-1].style.color = color_arr[2];
-        })
-        bannerText[i].addEventListener('mouseleave', () =>{
-            bannerText[i].style.color = 'black';
-            bannerText[i+1].style.color = 'black';
-            bannerText[i-1].style.color = 'black';
-        })
-    }
+    setInterval(()=>{
+        introText.classList.toggle('intro-toggle');
+    }, 1000)
 }
 
 const scroll = () => {
@@ -50,11 +41,11 @@ const scroll = () => {
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            setTimeout(()=>{entry.target.classList.add('title-toggle')},60)
+        if (entry.intersectionRatio > 0) {
+            setTimeout(()=>{entry.target.classList.add('title-toggle')},70)
         }
         else {
-            setTimeout(()=>{entry.target.classList.remove('title-toggle')},60)
+            setTimeout(()=>{entry.target.classList.remove('title-toggle')},70)
         }
     })
 })

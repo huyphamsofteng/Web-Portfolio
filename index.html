@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header class="navbar">
+        <header class="navbar title-hidden">
             <div class="nav-burger">
                 <div class="line"></div>
                 <div class="line"></div>
@@ -32,77 +32,80 @@
         <div id="top"></div>
         <main>
             <div class="banner title-hidden">
-                <div class="intro-text font-body"><span class="banner-span">H</span><span class="banner-span">a</span><span class="banner-span">r</span><span class="banner-span">r</span><span class="banner-span">y</span> <span class="banner-span">P</span><span class="banner-span">h</span><span class="banner-span">a</span><span class="banner-span">m</span></div>
-                <img src="./resources/profile-img.jpeg" alt="profile picture" class="profile">
-                <h1 class="intro-text font-body"><span class="highlight-container"><span class="highlight">Full-Stack Developer</span></span></h1>
+                <h1 class="font-nav">Harry Pham</h1>
+                <img src="./resources/avatar.jpg" alt="profile picture" class="profile">
+                <div class="intro-text font-nav">Full-Stack Developer <div class="intro-line"></div></div>
             </div>
             <div id="about-me"></div>
-            <div class="about-me title-hidden">
-                <div class="about-heading">
-                    <h2 class="font-body">About Me</h2>
-                </div>
-                <div class="about-body">
-                    <div class="about-edu">
-                        <p>Third-year student in Software Engineering Technology at McMaster University.</p>
-                        <div class="about-link">
-                            <a href="https://www.google.com" target="_blank"><img src="./resources/github.svg" alt="github" class="link-item"></a>
-                            <a href="https://www.google.com" target="_blank"><img src="./resources/linkedin.svg" alt="linkedin" class="link-item"></a>
-                            <a href="https://www.google.com" target="_blank"><img src="./resources/resume.svg" alt="resume" class="link-item"></a>
-                        </div>
-                        <h3 class="font-body">Education</h3>
-                        <div class="edu-container">
-                            <div class="edu-item">
-                                <p class="edu-text">2017 - 2020</p>
-                                <img class='edu-img' src="./resources/edu-img-1.svg" alt="">
-                                <p class="edu-text montserra">Electronics Engineering Technician</p>
-                            </div>
-                            <div class="line-box-1"></div>
-                            <div class="edu-item">
-                                <p class="edu-text ">2017 - 2020</p>
-                                <img class='edu-img' src="./resources/edu-img-1.svg" alt="">
-                                <p class="edu-text montserra">Computer Engineering Technology</p>
-                            </div>
-                            <div class="line-box-1"></div>
-                            <div class="edu-item">
-                                <p class="edu-text ">2023 - PRESENT</p>
-                                <img class='edu-img' src="./resources/edu-img-3.png" alt="">
-                                <p class="edu-text montserra">Software Engineering Technology</p>
-                            </div>
-                        </div>
+            <div class="wrapper-1">
+                <div class="about-me title-hidden">
+                    <div class="about-heading">
+                        <h2 class="font-body">About Me</h2>
                     </div>
-                    <div class="about-work">
-                        <h3 class="work-text" id="work">Work Experience</h3>
-                        <div class="work-item-left">
-                            <div class="year"><p>2023</p></div>
-                            <h4 class="work-title">IT Service Field I </h4>
+                    <div class="about-body">
+                        <div class="about-edu">
+                            <p>Third-year student in Software Engineering Technology at McMaster University.</p>
+                            <div class="about-link">
+                                <a href="https://www.google.com" target="_blank"><img src="./resources/github.svg" alt="github" class="link-item"></a>
+                                <a href="https://www.google.com" target="_blank"><img src="./resources/linkedin.svg" alt="linkedin" class="link-item"></a>
+                                <a href="https://www.google.com" target="_blank"><img src="./resources/resume.svg" alt="resume" class="link-item"></a>
+                            </div>
+                            <h3 class="font-nav">Education</h3>
+                            <div class="edu-container">
+                                <div class="edu-item">
+                                    <div class="edu-text-1">2017 - 2020</div>
+                                    <img class='edu-img' src="./resources/edu-img-1.svg" alt="Diploma">
+                                    <div class="edu-text-2 ">Electronics Engineering Technician</div>
+                                </div>
+                                <div class="edu-item">
+                                    <div class="edu-text-1">2017 - 2020</div>
+                                    <img class='edu-img' src="./resources/edu-img-1.svg" alt="Advanced Diploma">
+                                    <div class="edu-text-2 ">Computer Engineering Technology</div>
+                                </div>
+                                <div class="edu-item">
+                                    <div class="edu-text-1">2023 - Present</div>
+                                    <img class='edu-img' src="./resources/edu-img-3.png" alt="Degree">
+                                    <div class="edu-text-2 ">Software Engineering Technology</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="line-box-2"></div>
-                        <div class="work-item-right">
-                            <div class="year"><p>2020</p></div>
-                            <h4 class="work-title">Computer Technician </h4> 
+                        <div class="about-work">
+                            <h3 class="font-nav" id="work">Work Experience</h3>
+                            <div class="work-item-left">
+                                <div class="year"><p>2023</p></div>
+                                <h4 class="work-title">IT Service Field I </h4>
+                            </div>
+                            <div class="line-box-2"></div>
+                            <div class="work-item-right">
+                                <div class="year"><p>2020</p></div>
+                                <h4 class="work-title">Computer Technician </h4> 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="tech"></div>
+            <div class="wrapper-2">
             <div class="language title-hidden">
-                <h2 class="font-body">Programming Language I use</h2>
+                <h2 class="font-body">Programming Language I Use</h2>
                 <div class="lang-container">
                     <div class="lang-item">
                         <img src="./resources/project-1.png" alt="currency converter" class="lang-img">
                         <h3>Currency Convert</h3>
                         <p>Python script to convert currency in real-time exchange rate.</p>
                         <div class="lang-link">
-                        <img src="./resources/python.svg" alt="python icon" class="link-item"></div>
+                            <img src="./resources/python.svg" alt="python icon" class="link-item">
+                        </div>
                     </div>
                     <div class="lang-item">
                         <img src="./resources/project-2.png" alt="web-based porject" class="lang-img">
                         <h3>Dev Huy Pham</h3>
                         <p>A web-based project using HTML CSS JS.</p>
                         <div class="lang-link">
-                        <img src="./resources/html-5.svg" alt="html" class="link-item">
-                        <img src="./resources/css-3.svg" alt="css" class="link-item">
-                        <img src="./resources/js.svg" alt="js" class="link-item">
+                            <img src="./resources/html-5.svg" alt="html" class="link-item">
+                            <img src="./resources/css-3.svg" alt="css" class="link-item">
+                            <img src="./resources/js.svg" alt="js" class="link-item">
+                            <img src="./resources/bootstrap-fill.svg" alt="bootstrap" class="link-item">
                         </div>
                     </div>
                     <div class="lang-item">
@@ -110,10 +113,11 @@
                         <h3>Gauss Elimination</h3>
                         <p>Calculate x vector of input matrix using Gauss Elimination</p>
                         <div class="lang-link">
-                        <img src="./resources/python.svg" alt="python icon" class="link-item">
+                            <img src="./resources/python.svg" alt="python icon" class="link-item">
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
             <div class="contact title-hidden">
                 <h2 class="font-body" id="contact">Contact Me</h2>
