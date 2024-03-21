@@ -62,8 +62,8 @@ img {
     position: fixed;
     top: 0%;
     padding: 1vh 0;
-    min-width: 100vw;
-    width: 100vw;
+    min-width: 100%;
+    width: 100%;
     min-height: 5vh;
     height: 5vh;
     z-index: 30;
@@ -425,7 +425,12 @@ img {
     .font-body{
         font-size: 5vw;
     }
-
+    .navbar, .nav-link,  .banner, .about-me, .wrapper-1, .language, .contact{
+        width: 100vw;
+        min-width: 100vw;
+        margin-left: 0;
+        padding-left: 0;
+    }
     /* Navbar  */
     .logo{
         margin-left: 0;
@@ -441,12 +446,11 @@ img {
         display: block;
         position: absolute;
         right: 10px;
+        top: 5px;
     }
     .nav-link{
         margin-right: 0;
         flex-direction: column;
-        width: 100%;
-        min-width:100%;
         transform: scaleY(0);
         transition: transform ease-in 333ms;
         transform-origin: top;
@@ -510,6 +514,15 @@ img {
     #work{
         align-self: start;
     }
+    .work-item-left .work-title{
+        order: 2;
+        text-align: start;
+    }
+    .work-item-left, .work-item-right{
+        left: 0;
+        right: 0;
+    }
+    /* Programming section */
     .lang-item p{
         font-size: 3.3vw;
     }
