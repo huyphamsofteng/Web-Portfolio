@@ -1,51 +1,35 @@
-const navBurger = document.querySelector('.nav-burger');
-const navLink = document.querySelector('.nav-link');
-const logo = document.getElementsByClassName('logo-letter');
+let left = document.querySelector(".left")
+let right = document.querySelector(".right")
+let slider = document.querySelector(".slider")
+const intersectionObs = document.querySelectorAll('.transitioning');
 
-const langContainer = document.querySelector('.lang-container');
-const navIcon = document.querySelectorAll('.line');
-const introText = document.querySelector('.intro-line');
+let pContainer = document.querySelector(".projects-container")
+let navbar = document.querySelector(".navbar")
 
-const intersectionObs = document.querySelectorAll('.title-hidden');
 
-const navBar = () => {
-    navBurger.addEventListener('click',()=>{
-        navLink.classList.remove('nav-link-hidden');
-        navLink.classList.toggle('nav-link-toggle');
-        navIcon[0].classList.toggle('nav-burger-toggle');
-        navIcon[1].classList.toggle('nav-burger-toggle-1');
-        navIcon[2].classList.toggle('nav-burger-toggle-2');
-    })
-    
-    navLink.addEventListener('mouseleave',()=>{
-        navLink.classList.add('nav-link-hidden');
-        navLink.classList.remove('nav-link-toggle');
-        navIcon[0].classList.remove('nav-burger-toggle');
-        navIcon[1].classList.remove('nav-burger-toggle-1');
-        navIcon[2].classList.remove('nav-burger-toggle-2');
-    })
-}
+let width = slider.offsetWidth
+let index = 0
+window.addEventListener("resize", function () {
+    width = project.offsetWidth;
+});
 
-const banner = () =>{
-    setInterval(()=>{
-        introText.classList.toggle('intro-toggle');
-    }, 1000)
-}
+right.addEventListener("click", function () {
+    index = 1;
+    pContainer.style.transform = `translateX(-${index * width}px)`;
+});
 
-const scroll = () => {
-    langContainer.addEventListener('wheel', (e) => {
-        e.preventDefault();
-        langContainer.scrollLeft += e.deltaY;
-    })
-}
+left.addEventListener("click", function () {
+    index = 0;
+    pContainer.style.transform = `translateX(-${index * width}px)`;
+});
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach((entry) => {
         if (entry.intersectionRatio > 0) {
-            setTimeout(()=>{entry.target.classList.add('title-toggle')},70)
+            setTimeout(()=>{entry.target.classList.add('transitioned')},70)
         }
         else {
-            setTimeout(()=>{entry.target.classList.remove('title-toggle')},70)
+            setTimeout(()=>{entry.target.classList.remove('transitioned')},70)
         }
     })
 })
@@ -57,16 +41,4 @@ const runObserver = () => {
     } 
 }
 
-navBar();
-banner();
-runObserver();
-scroll();
-
-
-
-
-
-
-
-
-
+runObserver()

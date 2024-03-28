@@ -4,126 +4,227 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Harry Pham</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="./style.css" type="text/css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="./script.js" defer></script>
     </head>
     <body>
-        <header class="navbar title-hidden">
-            <div class="nav-burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+        <header class="navbar navbar-expand-lg fixed-top container-fluid">
+            <div class="container-fluid">
+                <a class="style-logo navbar-brand" href="#">
+                    HARRY PHAM
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-1"><a href="#top" class="style-nav nav-link" arial-current="my portfolio">My Portfolio</a></li>
+                        <li class="nav-item px-1"><a href="#experience" class="style-nav nav-link" arial-current="experience">Work Experience</a></li>
+                        <li class="nav-item px-1"><a href="#projects" class="style-nav nav-link" arial-current="Projects">Projects</a></li>
+                        <li class="nav-item px-1"><a href="#contact" class="style-nav nav-link" arial-current="Contact">Contact Me</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="logo">
-                <span class="logo-letter">H</span><span class="logo-letter">a</span><span class="logo-letter">r</span><span class="logo-letter">r</span><span class="logo-letter">y</span><span>&nbsp;</span><span class="logo-letter">P</span><span class="logo-letter">h</span><span class="logo-letter">a</span><span class="logo-letter">m</span>
-            </div>
-            <ul class="nav-link">
-                <li><a href="#top" class="font-nav">Introduction</a></li>
-                <li><a href="#about-me" class="font-nav">My Experience</a></li>
-                <li><a href="#tech" class="font-nav">Technology</a></li>
-                <li><a href="#contact" class="font-nav">Contact Me</a></li>
-            </ul>
         </header>
         <div id="top"></div>
         <main>
-            <div class="banner title-hidden">
-                <h1 class="font-nav">Harry Pham</h1>
-                <img src="./resources/avatar.jpg" alt="profile picture" class="profile">
-                <div class="intro-text font-nav">Full-Stack Developer <div class="intro-line"></div></div>
-            </div>
-            <div id="about-me"></div>
-            <div class="wrapper-1">
-                <div class="about-me title-hidden">
-                    <div class="about-heading">
-                        <h2 class="font-body">About Me</h2>
-                    </div>
-                    <div class="about-body">
-                        <div class="about-edu">
-                            <p>Level 3 student in Software Engineering Technology at McMaster University.</p>
-                            <div class="about-link">
-                                <a href="https://github.com/huyphamsofteng" target="_blank"><img src="./resources/github.svg" alt="github" class="link-item"></a>
-                                <a href="www.linkedin.com/in/harryph8605" target="_blank"><img src="./resources/linkedin.svg" alt="linkedin" class="link-item"></a>
-                                <a href="https://drive.google.com/file/d/1NxrqI-Wi9R3qad9Qz-mI5z1zJ5Yu6m_a/view?usp=drive_link" target="_blank"><img src="./resources/resume.svg" alt="resume" class="link-item"></a>
-                            </div>
-                            <h3 class="font-nav">Education</h3>
-                            <div class="edu-container">
-                                <div class="edu-item">
-                                    <div class="edu-text-1">2017 - 2020</div>
-                                    <img class='edu-img' src="./resources/edu-img-1.svg" alt="Diploma">
-                                    <div class="edu-text-2 ">Electronics Engineering Technician</div>
-                                </div>
-                                <div class="edu-item">
-                                    <div class="edu-text-1">2017 - 2020</div>
-                                    <img class='edu-img' src="./resources/edu-img-1.svg" alt="Advanced Diploma">
-                                    <div class="edu-text-2 ">Computer Engineering Technology</div>
-                                </div>
-                                <div class="edu-item">
-                                    <div class="edu-text-1">2023 - Present</div>
-                                    <img class='edu-img' src="./resources/edu-img-3.png" alt="Degree">
-                                    <div class="edu-text-2 ">Software Engineering Technology</div>
-                                </div>
-                            </div>
+            <div class="portfolio container-fluid">
+                <div class="row row-cols-2">
+                    <div class="col-12 col-md-6 order-xs-2"><div class="row justify-content-center"><img src="./resources/avatar.jpg" alt="profile picture" class="portfolio-img"></div></div>
+                    <div class="col-12 col-md-6 order-xs-1 align-self-center transitioning transitioning-right">
+                        <div class="portfolio-text row">
+                            <h1 class="style-h1 text-uppercase text-center text-md-start ">HARRY PHAM</h1>
                         </div>
-                        <div class="about-work">
-                            <h3 class="font-nav" id="work">Work Experience</h3>
-                            <div class="work-item-left">
-                                <div class="year"><p>2023</p></div>
-                                <h4 class="work-title">IT Service Field I </h4>
-                            </div>
-                            <div class="line-box-2"></div>
-                            <div class="work-item-right">
-                                <div class="year"><p>2020</p></div>
-                                <h4 class="work-title">Computer Technician </h4> 
+                        <div class="row my-1">
+                            <h1 class="style-p0 lh-base text-center text-lg-start">
+                                Level 3 of B.Tech - McMaster University
+                                <br>Full-stack Developer
+                            </h1>
+                        </div>
+                        <div class="row justify-content-center align-items-center">
+                            <div class="portfolio-link">
+                                <a href="https://github.com/huyphamsofteng" class="portfolio-item portfolio-item px-3 py-1 " target="_blank" alt="github">
+                                    <div class="style-pill px-2">Github</div>
+                                    <img src="./resources/github.svg" alt="github" class="icons">
+                                </a>
+                                <a href="https://www.linkedin.com/in/harryph8605" class="portfolio-item px-3 py-1" target="_blank" alt="Linkedin">
+                                    <div class="style-pill px-2">LinkedIn</div>
+                                    <img src="./resources/linkedin.svg" alt="LinkedIn" class="icons">
+                                </a>
+                                <a class="portfolio-item px-3 py-1" target="_blank" href="https://drive.google.com/file/d/1NxrqI-Wi9R3qad9Qz-mI5z1zJ5Yu6m_a/view" alt="Resume">
+                                    <div class="style-pill px-2">Resume</div>
+                                    <img src="./resources/resume.svg" alt="Resume" class="icons">
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="tech"></div>
-            <div class="language title-hidden">
-                <h2 class="font-body">Programming Language I Use</h2>
-                <div class="lang-container">
-                    <div class="lang-item">
-                        <img src="./resources/project-1.png" alt="currency converter" class="lang-img">
-                        <h3>Currency Convert</h3>
-                        <p>Python script to convert currency in real-time exchange rate.</p>
-                        <div class="lang-link">
-                            <img src="./resources/python.svg" alt="python icon" class="link-item">
+            <div id="experience"></div>
+            <div class="exp container-fluid my-5">
+                <div class="row row-cols-2 mx-lg-5 mx-0">
+                    <div class="col-12 col-md-6 transitioning transitioning-down">
+                        <div class="style-h2 py-1">Education</div>
+                        <div class=" py-2">
+                            <div class="edu-item py-5">
+                                <div class="dots dot-1"></div> 
+                                <div class="ms-5 edu-text"> 
+                                    <span class="style-p1">Bachelor of Technology, Software Engineering</span><br>
+                                    <span class="style-p2">September 2023 - April 2026<br>McMaster University | Canada </span>
+                                </div>
+                            </div>
+                            <div class="edu-item py-5">
+                                <div class="dots dot-1"></div> 
+                                <div class="ms-5 edu-text"> 
+                                    <span class="style-p1">Computer Engineering Technology</span><br>
+                                    <span class="style-p2">September 2017 - September 2020<br>Seneca Polytechnic | Canada </span>
+                                </div>
+                            </div>
+                            <div class="edu-item py-5">
+                                <div class="dots dot-1"></div> 
+                                <div class="ms-5 edu-text"> 
+                                    <span class="style-p1">Electronic Engineering Technology</span><br>
+                                    <span class="style-p2">September 2017 - April 2020<br>Seneca Polytechnic | Canada  </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="lang-item">
-                        <img src="./resources/project-2.png" alt="web-based porject" class="lang-img">
-                        <h3>Dev Huy Pham</h3>
-                        <p>A web-based project using HTML CSS JS.</p>
-                        <div class="lang-link">
-                            <img src="./resources/html-5.svg" alt="html" class="link-item">
-                            <img src="./resources/css-3.svg" alt="css" class="link-item">
-                            <img src="./resources/js.svg" alt="js" class="link-item">
-                        </div>
-                    </div>
-                    <div class="lang-item">
-                        <img src="./resources/project-3.png" alt="currency converter" class="lang-img">
-                        <h3>Gauss Elimination</h3>
-                        <p>Calculate x vector of input matrix using Gauss Elimination</p>
-                        <div class="lang-link">
-                            <img src="./resources/python.svg" alt="python icon" class="link-item">
+                    <div class="col-12 col-md-6 transitioning transitioning-up">
+                        <div class="style-h2 py-1">Work Experience</div>
+                        <div class=" py-2">
+                            <div class="work-item py-5">
+                                <div class="dots dot-2"></div> 
+                                <div class="ms-5 work-text"> 
+                                    <span class="style-p1">IT Service I</span><br>
+                                    <span class="style-p2">1 year - CompuCom Inc. | Canada </span>
+                                    <span class="style-p2">
+                                        <ul>
+                                            <li>Maintain, troubleshoot, support on-site laptops at BMO Bank</li>
+                                            <li>Resolve tickets at Shell, Home Depot, Tim Horton</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="work-item py-5 ">
+                                <div class="dots dot-2"></div> 
+                                <div class="ms-5 work-text"> 
+                                    <span class="style-p1">Computer Technician</span><br>
+                                    <span class="style-p2">3 years - Advanced Skytech Ltd. | Canada </span>
+                                    <span class="style-p2">
+                                        <ul>
+                                            <li>Troubleshoot, install, replace, and configure PC/laptop for wholesale business</li>
+                                            <li>Achieved Microsoft Certification and becomes one of the biggest companies in refurbish industry in NA</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="contact title-hidden">
-                <h2 class="font-body" id="contact">Contact Me</h2>
-                <h3>I'm currently located in Toronto, CA<br>If something catches your eye, <br>My email: <a href="mailto:phamd18@mcmaster.ca" id="email">phamd18@mcmaster.ca</a></h3>
+            <div class="" id="projects"></div>
+            <div class="project container-fluid my-lg-5 my-0">
+                <div class="row py-5"><span class="style-h2 projects-title">Projects</span></div>
+                <div class="row align-items-center justify-content-center">
+                    <div class="left col-6 col-md-1 order-2 order-md-1 mx-3 mx-md-0"><img src="./resources/left.svg" alt="left click" class="icons-2"></div>
+                    <div class="col-12 col-md-10 order-1 order-md-2 justify-content-center slider">
+                        <div class="projects-container row row-cols-3">
+                            <div class="col-3 py-3 projects-order">
+                                <div class="row projects-item py-3">
+                                    <img src="./resources/project-1.png" alt="project img Investment 101" class="project-img">
+                                    <div class="projects-info ps-5">
+                                        <ul>
+                                            <li><span class="style-p2">Investment 101</span></li>
+                                            <li><a href="https://github.com/huyphamsofteng/InvestmentPortfolio.git" arial-current="Investment101" class="nav-link">Explore More</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row py-1 justify-content-center">
+                                    <img src="./resources/html-5.svg" alt="" class="icons-2">
+                                    <img src="./resources/css-3.svg" alt="" class="icons-2">
+                                    <img src="./resources/js.svg" alt="" class="icons-2">
+                                    <img src="./resources/python.svg" alt="" class="icons-2">
+                                    <img src="./resources/flask.svg" alt="" class="icons-2">
+                                    <img src="./resources/mysql.svg" alt="" class="icons-2">
+                                </div>
+                            </div>
+
+                            <div class="col-3 py-3 projects-order">
+                                <div class="row projects-item py-3 ">
+                                    <img src="./resources/project-2.png" alt="project img web portfolio" class="project-img">
+                                    <div class="projects-info ps-5">
+                                        <ul>
+                                            <li><span class="style-p2">Web Portfolio</span></li>
+                                            <li><a href="https://github.com/huyphamsofteng/Web-Portfolio.git" arial-current="web portfolio" class="nav-link">Explore More</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row py-1 justify-content-center">
+                                    <img src="./resources/html-5.svg" alt="" class="icons-2">
+                                    <img src="./resources/css-3.svg" alt="" class="icons-2">
+                                    <img src="./resources/js.svg" alt="" class="icons-2">
+                                    <img src="./resources/bootstrap.svg" alt="" class="icons-2">
+
+                                </div>
+                            </div>              
+
+                            <div class="col-3 py-3 projects-order">
+                                <div class="row projects-item py-3">
+                                    <img src="./resources/project-3.png" alt="project img python " class="project-img">
+                                    <div class="projects-info ps-5">
+                                        <ul>
+                                            <li><span class="style-p2">Currency Converter</span></li>
+                                            <li><a href="https://github.com/huyphamsofteng/PythonCurrencyConverter.git" arial-current=" Currency Converter" class="nav-link">Explore More</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row py-1 justify-content-center">
+                                    <img src="./resources/python.svg" alt="" class="icons-2">
+                                </div>
+                            </div>
+
+                            <div class="col-3 py-3 projects-order">
+                                <div class="row projects-item py-3">
+                                    <img src="./resources/project-4.png" alt="project img python" class="project-img">
+                                    <div class="projects-info ps-5">
+                                        <ul>
+                                            <li><span class="style-p2">Message Generator</span></li>
+                                            <li><a href="https://github.com/huyphamsofteng/Message-Generator.git" arial-current="GaussElimination" class="nav-link">Explore More</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row py-1 justify-content-center">
+                                    <img src="./resources/js.svg" alt="" class="icons-2">
+                                    <img src="./resources/node-js.svg" alt="" class="icons-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right col-6 col-md-1 order-3 mx-3 mx-md-0"><img src="./resources/right.svg" alt="right click" class="icons-2"></div>
+                </div>
             </div>
         </main>
-        <footer>
-
+        <footer id="contact" class="container-fluid ">
+            <div class="row contact align-items-center ">
+                <div class="col-12 col-md-6 order-2 order-md-1">
+                    <h1 class="style-h1 text-center">Thank You</h1>
+                </div>
+                <div class=" style-p col-12 col-md-6 order-1 order-md-2">
+                    <div class="row justify-content-center">
+                        <div class=" contact-info p-md-5 p-3">
+                            I'm currently located in Toronto, CA<br>
+                            If something catches your eye,<br>
+                            My email: <a href="mailto:phamd18@mcmaster.ca" class="email">phamd18@mcmaster.ca</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
         <script src="./script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>
