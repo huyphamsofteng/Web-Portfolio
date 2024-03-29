@@ -7,6 +7,10 @@
 }
 html{
     scroll-behavior: smooth;
+    
+}
+body{
+    font-family: "Roboto Mono", monospace;
 }
 :root{
     --color-1: #F9E795;
@@ -185,6 +189,7 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 .projects-container:nth-child(1){
     margin-left: 5vw;
@@ -210,6 +215,28 @@ a{
 }
 .left,.right:hover{
     cursor: pointer;
+}
+.project-link{
+    color: white;
+}
+.projects-order{
+    position: relative;
+}
+.project-detail{
+    position: absolute;
+    display: block;
+    border-radius: 20px;
+    background-color: var(--color-1);
+    transition: all ease 200ms;
+    opacity: 0;
+    height: 0;
+    transform: translateY(0px);
+}
+.project-detail-trigger{
+    opacity: 1;
+    height: auto;
+    transform-origin: top;
+    transform: translateY(20px);
 }
 /* contact */
 .contact{

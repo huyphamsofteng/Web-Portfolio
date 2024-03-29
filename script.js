@@ -2,6 +2,8 @@ let left = document.querySelector(".left")
 let right = document.querySelector(".right")
 let slider = document.querySelector(".slider")
 let projectsItem = document.querySelectorAll(".projects-order")
+let projectLink = document.querySelectorAll(".project-link")
+let projectDetail = document.querySelectorAll(".project-detail")
 
 const intersectionObs = document.querySelectorAll('.transitioning');
 
@@ -28,6 +30,15 @@ left.addEventListener("click", function () {
         pContainer.style.transform = `translateX(-${index * width}px)`;
     }
 });
+
+for (let i = 0; i < projectLink.length; i++){
+    projectLink[i].addEventListener("mouseover",()=>{
+        projectDetail[i].classList.add("project-detail-trigger");
+    })
+    projectLink[i].addEventListener("mouseleave",()=>{
+        projectDetail[i].classList.remove("project-detail-trigger");
+    })
+};
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach((entry) => {
