@@ -117,6 +117,7 @@ a{
     border-radius: 30px;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     column-gap: calc(1vw + 1px);
     padding: 1rem;
 }
